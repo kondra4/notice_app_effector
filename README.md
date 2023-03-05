@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Note Editor 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Основной стек:
+- React
+- Effector
+- Draft.js
+- Ant Design
+- SCSS
+- React Router
+- Feature-Sliced Design
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Обязательные требования:
+- Создание одной простейшей заметки только с текстом.<br/>
+  [**EditNote**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/features/edit-note/index.jsx#L9)
+- Редактирование заметки в окне собственного приложения.<br/>
+  [**EditNote**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/features/edit-note/index.jsx#L9)
+- Сохранение заметки между сеансами приложения, в любом формате.<br/>
+[**LocalStorage**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/entities/note/module/index.js#L12)
+- При первом запуске, приложение должно иметь одну заметку с текстом.<br/>
+  [**InitialState**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/entities/note/module/index.js#L22)
+### Желательно:
+- Создание нескольких заметок в приложении.<br/>
+  [**newNote**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/pages/tasks-list/index.jsx#L17)
+- Выводить список существующих заметок.<br/>
+  [**Render List**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/pages/tasks-list/index.jsx#L36)
+- Возможность редактирования любой заметки из списка.<br/>
+  [**EditNote**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/features/edit-note/index.jsx#L9)
+- Удаление заметок.<br/>
+  [**EffectEffector**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/entities/note/module/index.js#L28)
+- Также сохранять все заметки между сеансами.<br/>
+  [**LocalStorage**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/entities/note/module/index.js#L12)
+### Идеи для улучшения:
+- Возможность выделять текст курсивом, жирным и т.п.<br/>
+  [**draft-js-plugins/static-toolbar**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/features/text-editor/index.jsx#L57)<br/>
+~~- Менять шрифт и размер текста.<br/>~~
+- Вставка картинок.<br/>
+  [**draft-js-plugins/image**](https://github.com/kondra4/notice_app_effector/blob/3ad9cf3e1097f7677f04fb484bfa19cbf916cfae/src/features/text-editor/index.jsx#L47)
